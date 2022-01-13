@@ -1,0 +1,79 @@
+//comment array will come here
+let comments =
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+	<script type="text/javascript">	
+	
+let winnerCount=10;
+let rand;
+let winner;
+let winners = [];
+
+function pick(){
+console.log("ANKARAFOREIGNERS GIVEAWAY PICKER has started...");
+picker();
+}
+
+function picker(){
+console.log("WINNERS :");
+for(let i=0;i<winnerCount;i++){
+rand = Math.floor(Math.random() * comments.length);
+winner = comments[rand].innerHTML;
+
+if(winnerAlreadyExists(winner)){
+i=i-1;
+continue;
+}
+
+console.log("winner "+(i+1)+ " "+winner);
+winners.push(winner);
+}
+}
+
+function winnerAlreadyExists(winner){
+for(let k=0;k<winners.length;k++){
+if(winners[k]===winner){
+return true;
+}
+}
+return false;
+}
+
+
+function winnerTaggedAFriend(winner){
+for(let k=0;k<winners.length;k++){
+if(winners[k]===winner){
+return true;
+}
+}
+return false;
+}
+;
+
+
+////getting comments
+function getComments(){
+let comments = document.getElementsByClassName("sqdOP"); 
+let commenters=[];
+for(let m=0;m<comments.length;m++){
+commenters.push(comments[m].innerText);
+}
+JSON.stringify(commenters);
+}
+
+
+
+	</script>
+<title>Page Title</title>
+</head>
+<body>
+
+<h1>This is a Heading</h1>
+<p>This is a paragraph.</p>
+
+</body>
+</html>
